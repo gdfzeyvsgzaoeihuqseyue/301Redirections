@@ -62,7 +62,7 @@ const domainMap: Record<string, string> & { 'default': string } = {
 }
 
 // Variable
-const initialCountdown = 5000
+const initialCountdown = 5
 const circumference = 2 * Math.PI * 45 
 const countdown = ref(initialCountdown)
 const intervalId = ref<number | null>(null)
