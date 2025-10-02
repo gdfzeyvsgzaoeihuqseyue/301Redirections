@@ -1,8 +1,8 @@
 <template>
-  <div class="redirect-container">
+  <main class="redirect-container">
     <div class="redirect-card">
       <!-- Logo -->
-      <div class="icon-container">
+      <div class="logo-container">
         <img src="https://cdn.jsdelivr.net/gh/progestionsoft/Files/_General/Logos/PGS-DC.png" alt="Logo" class="pgs-logo" />
       </div>
 
@@ -48,7 +48,7 @@
         <a :href="targetUrl" class="manual-link">cliquez ici</a>
       </p>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -62,7 +62,7 @@ const domainMap: Record<string, string> & { 'default': string } = {
 }
 
 // Variable
-const initialCountdown = 5
+const initialCountdown = 5000
 const circumference = 2 * Math.PI * 45 
 const countdown = ref(initialCountdown)
 const intervalId = ref<number | null>(null)
@@ -137,7 +137,6 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   padding: 20px;
 }
 
@@ -165,16 +164,22 @@ onUnmounted(() => {
   }
 }
 
-.icon-container {
+.logo-container {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pgs-logo {
-  width: 60px;
-  height: 60px;
-  color: #3b82f6;
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   animation: pulse 2s infinite;
+  object-fit: contain;
 }
+
 
 @keyframes pulse {
 
