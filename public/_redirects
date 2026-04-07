@@ -3,3 +3,6 @@ https://stlk.netlify.app/*   https://eqt.netlify.app/:splat   301!
 
 # Suitops (newtes → suitops)
 https://newtes.netlify.app/*   https://suitops.netlify.app/:splat   301!
+
+# Suitops (cypass netlify → cypass cybercub)
+https://newtes.netlify.app/*   https://cypass.cybercub.online/:splat   301!

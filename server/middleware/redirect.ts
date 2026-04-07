@@ -15,4 +15,11 @@ export default defineEventHandler((event) => {
     event.res.end()
     return
   }
+
+   // CYPASS
+  if (host.includes('cypass.netlify.app')) {
+    event.res.writeHead(301, { Location: `https://cypass.cybercub.online/${url}` })
+    event.res.end()
+    return
+  }
 })
